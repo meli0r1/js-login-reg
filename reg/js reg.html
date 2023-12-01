@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    body {
+      background-image: url('fon.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+
+  <div class="form-card">
+    <div class="logo-placeholder">
+      <h1>Your Logo</h1> 
+    </div>
+
+    <h2>Register</h2>
+
+    <form id="register">
+      <!-- Username input -->
+      <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+      </div>
+
+      <!-- Email input -->
+      <div class="input-group">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Password input -->
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+
+      <!-- Confirm Password input -->
+      <div class="input-group">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+      </div>
+
+      <!-- Register button -->
+      <button type="submit" href="js.html">Register</button>
+    </form>
+
+    <p>Already have an account? <a href="js.html">Login</a></p>
+  </div>
+
+  <script>
+    document.getElementById('register').onsubmit = function(event) {
+      event.preventDefault(); 
+
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirm-password').value;
+
+      // Basic validation
+      if(password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return false;
+      }
+
+      // Further form submission actions go here...
+      console.log('Registration form submitted with:', username, email, password);
+      
+      window.location.href = 'js.html';
+    };
+  </script>
+
+</body>
+</html>

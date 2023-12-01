@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, h2, form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Styling the form card */
+.form-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+/* Form title and welcome message */
+.form-card h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling form input fields */
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Placeholder for the logo area */
+.logo-placeholder {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styling the submit button */
+.form-card button {
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-card button:hover {
+  background: #444;
+}
+
+/* Link to login page */
+.form-card p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.form-card a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.form-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-card {
+    width: 90%;
+  }
+}
+.my-background-section {
+  background-image: url('path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

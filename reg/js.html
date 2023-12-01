@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <style>
+    body {
+      background-image: url('fon.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+  <div class="form-card">
+    <div class="logo-placeholder">
+      <h1>Your Logo</h1> <!-- Replace with your image logo if necessary -->
+    </div>
+
+    <h2>Welcome!</h2>
+
+    <form id="login">
+      <!-- Username input -->
+      <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="Enter your user name" required>
+      </div>
+
+      <!-- Password input -->
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+      </div>
+
+      <!-- Login button -->
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="js reg.html">Register</a></p>
+  </div>
+<script type="text/javascript">
+  document.getElementById('login').onsubmit = function(event) {
+  event.preventDefault();
+  // Get user data
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  
+  // Here you can add your code to validate the user, for example, using a server-side check
+  console.log('User logged in with username:', username, 'and password:', password);
+  
+  // Redirect to a new page or show a success message
+  window.location.href = 'js reg.html';
+};
+
+</script>
+</body>
+</html>
